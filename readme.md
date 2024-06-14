@@ -10,7 +10,7 @@
 
 2. Install required Python packages:
     ```bash
-    pip install -r requirements.txt
+    pip install -r requirement.txt
     ```
 
 3. Run Flask:
