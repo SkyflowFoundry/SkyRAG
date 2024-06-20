@@ -1,4 +1,4 @@
-# Project LLM-Guardrails Chrome Extension Demo
+# Project SkyRAG: RAG with Vault.
 
 ## Setup Instructions:
 
@@ -6,6 +6,7 @@
     ```bash
     python3 -m venv testenv
     source testenv/bin/activate
+    *** Upgrade Python version ***
     ```
 
 2. Install required Python packages:

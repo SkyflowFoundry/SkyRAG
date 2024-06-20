@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "85569d98-30e1-4a37-b31c-fa219c4aeecd",
+		"name": "RBAC RAG",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "32974426"
+	},
+	"item": [
+		{
+			"name": " http://127.0.0.1:5000/ingest",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "files",
+							"type": "file",
+							"src": "/Users/devanshubrahmbhatt/Downloads/Devanshu_test_final.pdf"
+						},
+						{
+							"key": "auth_level",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:5000/ingest"
+			},
+			"response": []
+		},
+		{
+			"name": " http://127.0.0.1:5000/db_query",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"query\": \"Tell me everything about Devanshu Brahmbhatt Bandminton\", \n    \"auth_level\": \"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:5000/db_query"
+			},
+			"response": []
+		},
+		{
+			"name": " http://127.0.0.1:5000/llm_call",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"query\": \"Who is Devanshu\",\n    \"auth_level\": \"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:5000/llm_call"
+			},
+			"response": []
+		},
+		{
+			"name": " http://127.0.0.1:5000/detect_check",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"I am Devanshu and I am living in Baroda;;skuflo\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:5000/detect_check"
+			},
+			"response": []
+		}
+	]
+}
